@@ -2,14 +2,10 @@ import os
 import glob
 import shutil
 
-
-
 # application constants
 CONSOLE_IO_SYMBOL = ">>> "
 MAX_USER_INPUT_WORDS = 9  # e.g. "ls -a -ifends .c .h" is a list of 5 inputs. The max is this constant value
 NULL_INPUT = "ignore!_!this!_!input"
-
-
 
 # application local variables
 __inputs = [NULL_INPUT] * MAX_USER_INPUT_WORDS
@@ -91,7 +87,7 @@ applet_switch = {
 }
 
 
-def resetinputs():
+def reset_inputs():
     for i in range(MAX_USER_INPUT_WORDS):
         __inputs[i] = NULL_INPUT
 
@@ -100,7 +96,7 @@ def main():
     print("\n    **** Running FMTools *****\n")
     while True:
         user_command = input(CONSOLE_IO_SYMBOL).strip()
-        resetinputs()
+        reset_inputs()
         if len(user_command) > 0:
             ucs = user_command.split()
             applet = ucs[0].lower()            # first word is the applet mode
