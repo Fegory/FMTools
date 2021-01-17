@@ -2,10 +2,14 @@ import os
 import glob
 import shutil
 
+
+
 # application constants
 CONSOLE_IO_SYMBOL = ">>> "
 MAX_USER_INPUT_WORDS = 9  # e.g. "ls -a -ifends .c .h" is a list of 5 inputs. The max is this constant value
 NULL_INPUT = "ignore!_!this!_!input"
+
+
 
 # application local variables
 __inputs = [NULL_INPUT] * MAX_USER_INPUT_WORDS
